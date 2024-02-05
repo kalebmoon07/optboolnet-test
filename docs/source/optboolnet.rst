@@ -5,26 +5,13 @@ Subpackages
 -----------
 
 .. toctree::
-   :maxdepth: 3
-   
+   :maxdepth: 4
+
    optboolnet.instances
 
-optboolnet.boolnet module
--------------------------
+Submodules
+----------
 
-.. automodule:: optboolnet.boolnet
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-optboolnet.model module
------------------------
-
-.. automodule:: optboolnet.model
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   
 optboolnet.algorithm module
 ---------------------------
 
@@ -33,10 +20,10 @@ optboolnet.algorithm module
    :undoc-members:
    :show-inheritance:
 
-optboolnet.config module
-------------------------
+optboolnet.boolnet module
+-------------------------
 
-.. automodule:: optboolnet.config
+.. automodule:: optboolnet.boolnet
    :members:
    :undoc-members:
    :show-inheritance:

@@ -22,6 +22,7 @@ requirements:
     - python
     - boolean.py
     - colomoto_jupyter
+    - algorecell_types
     - pyomo
     - gurobi
 

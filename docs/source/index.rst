@@ -1,16 +1,21 @@
 .. optboolnet documentation master file, created by
-   sphinx-quickstart on Tue Oct 24 21:12:06 2023.
+   sphinx-quickstart on Thu Feb  1 12:25:15 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+
 
 Welcome to optboolnet's documentation!
 ======================================
 
+``optboolnet`` is a Python package for optimization modules to analyze Boolean networks. 
+Currently, ``optboolnet`` supports the synchronous attractor control problem only.
+``optboolnet``
+
+
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Contents:
 
-   optboolnet
 
 
 Indices and tables

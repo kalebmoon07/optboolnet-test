@@ -201,9 +201,9 @@ class BendersAttractorControl(AttractorControl):
         for self.target_size in self.iter_target_size(max_control_size):
             _solution_list = list()
             self.model_master.set_constr_target_size(self.target_size)
-            while not self.is_timeout and self.find_candidate():
+            while not self.is_timeout and self._find_candidate():
                 ctrl = self.model_master.get_control()
-                if not self.is_separation_violated(ctrl) and not self.is_LLP_violated(
+                if not self._is_separation_violated(ctrl) and not self._is_LLP_violated(
                     ctrl
                 ):
                     yield ctrl
@@ -224,7 +224,7 @@ class BendersAttractorControl(AttractorControl):
             strategies.add(FromCondition("input", ctrl))
         return strategies
 
-    def find_candidate(self) -> bool:
+    def _find_candidate(self) -> bool:
         """Solves the master problem to find a solution candidate
 
         Returns:
@@ -233,7 +233,7 @@ class BendersAttractorControl(AttractorControl):
         self.step = EnumBendersStep.BENDERS_MASTER
         return self._optimize(self.model_master)
 
-    def is_separation_violated(self, ctrl: Control) -> bool:
+    def _is_separation_violated(self, ctrl: Control) -> bool:
         """Finds a forbidden trap space and adds a constraint that cuts off the candidate if one exists
 
         Args:
@@ -266,7 +266,7 @@ class BendersAttractorControl(AttractorControl):
         else:
             return False
 
-    def is_LLP_violated(self, ctrl: Control) -> bool:
+    def _is_LLP_violated(self, ctrl: Control) -> bool:
         """Finds a forbidden attractor and adds a constraint that cuts off the candidate if one exists
 
         Args:
